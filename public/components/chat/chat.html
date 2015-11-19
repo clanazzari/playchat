@@ -1,0 +1,33 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">PlayCHAT</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li ng-class="{ active: $state.current.name == 'chat.home' }">
+                    <a href="#">Home</a>
+                </li>
+                <li ng-hide="$state.current.name != 'chat.room'"
+                    ng-class="{ active: $state.current.name == 'chat.room' }">
+                    <a href="#">ChatRoom</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><img src="{{gdata.getUser().picture}}" style="width: 20px; border-radius:50%;"/>&nbsp;&nbsp;{{gdata.getUser().name}}</a>
+                </li>
+                <li><a href="#" ng-click="vmc.doLogout()">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div ui-view></div>

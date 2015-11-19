@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# chat application
+POST          /chat/message               controllers.ChatApplication.sendMessage()
+GET           /chat/receiver/:user        controllers.ChatApplication.eventListener(user: String)
+POST          /chat/user                  controllers.ChatApplication.addUser()
+DELETE        /chat/user/:user            controllers.ChatApplication.removeUser(user: String)
+
+# index.html
+GET           /                           controllers.Assets.at(path="/public", file="index.html")
+
+# static files
+GET           /*file                      controllers.Assets.versioned(path="/public", file: Asset)

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html ng-app="app">
+
+<head>
+    <title>PlayCHAT</title>
+    <meta name="google-site-verification" content="khHOo7ddznt6ZdfEuGRtNMQkw2u_vhyTXfnvcW5PPYw"/>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<!-- app body -->
+<div class="container" ui-view></div>
+
+<!-- libs -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="bower_components/angular-google-gapi/angular-google-gapi.min.js"></script>
+
+<!-- app controllers -->
+<script src="components/login/login.controller.js"></script>
+<script src="components/chat/room/room.controller.js"></script>
+<script src="components/chat/chat.controller.js"></script>
+
+<!-- app config -->
+<script src="app.js"></script>
+<script src="app.route.js"></script>
+
+</body>
+</html>

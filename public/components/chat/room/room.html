@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-ld-8 col-md-8 col-sm-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div ng-repeat="message in messages track by $index">
+                        {{message}}
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="vm.msg"
+                               ng-class="{'has-error' : vm.msg.length <=0 }"
+                               placeholder="Mensagem..." on-enter="vm.sendMessage()">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="vm.sendMessage()">Enviar</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-ld-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="media" ng-repeat="user in users track by $index">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="{{user.picture}}"
+                                     style="width: 36px; border-radius:50%;">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h5 class="media-heading"><b>{{user.name}}</b></h5>
+                            <h6>{{user.user}}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-footer">
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="vm.quitRoomAndDelete()">Sair</button>
+            </span>
+        </div>
+    </div>
+
+</div>
