@@ -2,7 +2,7 @@
 
 https://shrouded-chamber-1869.herokuapp.com
 
-TO PlayCHAT! é uma aplicação de chat simples que utiliza metodologias de Single Page Application com RestSerices. Neste projeto foi utilizado o Play Framework como tecnologia de back-end e AngularJS como front-end.
+O PlayCHAT! é uma aplicação de chat simples que utiliza metodologias de Single Page Application com RestSerices. Neste projeto foi utilizado o Play Framework como tecnologia de back-end e AngularJS como front-end.
 
 #### Single Page Application(SPA)
 Single Page Application(SPA) são aplicações moduladas com apenas uma pagina, aonde o conteúdo é controlado por técnicas de AJAX fazendo com que as aplicações nao possuam 'reloads' em paginas HTML. A ideia do Single Page Application é de remover a responsabilidade do servidor em permutar paginas, diminuir a carga 'client-server' e trazer mais responsabilidade para o cliente, fazendo com que a performance e a experiencia do usuário melhore.
